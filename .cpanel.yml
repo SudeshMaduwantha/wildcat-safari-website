@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/wildxvhv/public_html/
+    - export NODEPATH=/home/wildxvhv/nodevenv/public_html/16/bin
+    - $NODEPATH/npm install
+    - $NODEPATH/npm run build
+    - /bin/cp -R build/* $DEPLOYPATH
